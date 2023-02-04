@@ -1,0 +1,150 @@
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editorWrapped,.previewWrapped{
+    margin: 10px 0px 20px 0px; 
+    flex-direction: row;
+    min-height: 200px ;
+    border: 1px solid black;
+    background-color: rgb(255, 179, 179);
+    
+}
+
+.editorWrapped{
+    width: 650px;
+}
+
+.textarea{
+    width: 100%;
+    min-height: 158.52px;
+    margin-bottom: -5px;
+    padding-left: 5px;
+    outline: none;
+    border: none; 
+    background-color: rgb(255, 179, 179);
+    
+}
+
+.previewWrapped{
+    width: 800px;
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 850px) {
+    .previewWrapped {
+      max-width: 630px;
+    }
+  
+    .editorWrapped {
+      max-width: 550px;
+    }
+}
+
+
+.toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(175, 31, 31);
+    color: rgb(253, 253, 242);
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 650px) {
+    #app {
+      margin: 5px 0;
+      font-size: 0.75rem;
+    }
+
+    .toolbar{
+        font-size: 0.85rem;
+    }
+  
+    .editorWrapped{
+      width: 80vw;
+      margin: 0 auto;
+    }
+
+  
+    .previewWrapped  {
+      width: 90vw;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.expand{
+    min-height: 95vh;
+}
+
+.textExpand{
+    height: 95vh;
+}
+
+
+
+
+
+/*Preview Styles*/
+
+#preview{
+    padding:0px 10px;
+    margin: 5px 0px;
+    line-height: 1
+}
+
+#preview blockquote {
+    border-left: 3px solid #4b2c22;
+    color: #4b2c22;
+    padding-left: 5px;
+    margin-left: 25px;
+}
+#preview > p > code {
+    padding: 3px;
+}
+
+#preview code {
+    background: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+#preview pre {
+    display: block;
+    overflow: auto;
+    background: white;
+    padding: 5px;
+    line-height: 1.2;
+}
+
+#preview h1 {
+    border-bottom: 2px solid #4b2c22;
+}
+
+#preview h2 {
+    border-bottom: 1px solid #4b2c22;
+}
+
+#preview table {
+    border-collapse: collapse;
+}
+
+#preview td,
+#preview th {
+    border: 2px solid#4b2c22;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#preview img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+}
